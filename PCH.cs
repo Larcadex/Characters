@@ -141,7 +141,7 @@ namespace Characters
         {
             game_character target = characters[to_character];
 
-            if (is_near(target)) // Проверка, находятся ли они рядом
+            if (is_near(target)) 
             {
                 if (characters[to_character].side != side)
                 {
@@ -184,7 +184,7 @@ namespace Characters
         {
             game_character target = characters[to_character];
 
-            if (is_near(target)) // Проверка, находятся ли они рядом
+            if (is_near(target)) 
             {
                 if (characters[to_character].side != side)
                 {
@@ -336,6 +336,7 @@ namespace Characters
                 Console.WriteLine("------------------------------");
             }
             
+
         }
     }
 }

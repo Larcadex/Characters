@@ -11,15 +11,15 @@ namespace Characters
             Console.Write("Введите количество персонажей: ");
             int amount_сhars = int.Parse(Console.ReadLine());
             List<game_character> characters = new List<game_character>();
-            // Создаем список персонажей
+            
             for (int i = 0; i < amount_сhars; i++)
             {
                 string name = $"Персонаж{i + 1}";
-                int x = new Random().Next(1, 16); // Случайная координата X от 1 до 15
-                int y = new Random().Next(1, 16); // Случайная координата Y от 1 до 15
-                bool side = new Random().Next(2) == 0; // Случайно выбираем сторону (true или false)
-                int hp = 100; // Измените, если нужно другое начальное здоровье
-                bool alive = true; // Новые персонажи живы
+                int x = new Random().Next(1, 16); 
+                int y = new Random().Next(1, 16); 
+                bool side = new Random().Next(2) == 0; 
+                int hp = 100; 
+                bool alive = true; 
 
                 game_character newCharacter = new game_character();
                 newCharacter.new_chars(name, x, y, side, hp, alive);
@@ -293,7 +293,7 @@ namespace Characters
                 if (c >= 0 && c < characters.Count && !characters[c].get_alive())
                 {
                     characters[c].rebirth();
-                    break; // Выход из цикла после успешного возрождения
+                    break; 
                 }
                 else
                 {
@@ -314,7 +314,7 @@ namespace Characters
 
             if (targetChoice >= 0 && targetChoice < characters.Count && characters[targetChoice].get_alive())
             {
-                characters[choice].atack(targetChoice); // Передаем только индекс цели
+                characters[choice].atack(targetChoice); 
             }
             else
             {
@@ -390,6 +390,9 @@ namespace Characters
                 Console.Clear();
                 Console.WriteLine("Этот персонаж мертв.\n");
             }
+
+
         }
+
     }
 }
